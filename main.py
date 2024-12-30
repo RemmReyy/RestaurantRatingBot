@@ -109,7 +109,7 @@ def init_db():
     conn = sqlite3.connect('restaurants.db')
     c = conn.cursor()
 
-    c.execute('DROP TABLE IF EXISTS restaurants')
+    # Прибираємо DROP TABLE
     c.execute('''CREATE TABLE IF NOT EXISTS restaurants
                  (name TEXT UNIQUE, rating REAL, total_ratings INTEGER)''')
     c.execute('''CREATE TABLE IF NOT EXISTS ratings
